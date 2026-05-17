@@ -1,0 +1,124 @@
+<h2>经历时间线</h2>
+<p class="subtitle">垂直时间轴展示教育和工作经历</p>
+
+<div class="section">
+  <div class="mockup">
+    <div class="mockup-header">时间线版块示意</div>
+    <div class="mockup-body" style="padding: 1.5rem">
+      <div style="background: #0a0a1a; border-radius: 0.5rem; padding: 1.5rem">
+        <!-- Title -->
+        <div
+          style="
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ccd6f6;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          "
+        >
+          <span style="color: #00ffff">&gt;</span> 经历
+          <span
+            style="color: #495670; font-size: 0.8rem; font-family: monospace"
+            >// Timeline</span
+          >
+        </div>
+
+        <!-- Timeline -->
+        <div style="position: relative; padding-left: 2rem">
+          <!-- Vertical line -->
+          <div
+            style="
+              position: absolute;
+              left: 0.5rem;
+              top: 0;
+              bottom: 0;
+              width: 1px;
+              background: linear-gradient(
+                180deg,
+                #00ffff,
+                #ff00ff,
+                transparent
+              );
+            "
+          ></div>
+
+          <!-- Item 1 -->
+          <div style="position: relative; padding-bottom: 2rem">
+            <div
+              style="
+                position: absolute;
+                left: -1.65rem;
+                top: 0.3rem;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #00ffff;
+                box-shadow: 0 0 10px #00ffff;
+              "
+            ></div>
+            <div
+              style="
+                font-size: 0.8rem;
+                color: #00ffff;
+                font-family: monospace;
+                margin-bottom: 0.2rem;
+              "
+            >
+              2024 — 至今
+            </div>
+            <div style="font-size: 1rem; font-weight: 600; color: #ccd6f6">
+              公司/学校名称
+            </div>
+            <div style="font-size: 0.85rem; color: #8892b0">
+              职位/专业 · 简短描述做了什么
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div style="position: relative; padding-bottom: 2rem">
+            <div
+              style="
+                position: absolute;
+                left: -1.65rem;
+                top: 0.3rem;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #ff00ff;
+                box-shadow: 0 0 10px #ff00ff;
+              "
+            ></div>
+            <div
+              style="
+                font-size: 0.8rem;
+                color: #ff00ff;
+                font-family: monospace;
+                margin-bottom: 0.2rem;
+              "
+            >
+              2022 — 2024
+            </div>
+            <div style="font-size: 1rem; font-weight: 600; color: #ccd6f6">
+              之前的经历
+            </div>
+            <div style="font-size: 0.85rem; color: #8892b0">
+              职位/专业 · 简短描述
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>时间线交互</h3>
+  <ul style="line-height: 2; color: #ccd6f6">
+    <li>垂直时间轴，左侧发光圆点作为节点</li>
+    <li>轴线渐变色（青→紫→透明）</li>
+    <li>每个节点颜色交替（青/紫）</li>
+    <li>滚动进入视口时条目从左侧滑入</li>
+  </ul>
+</div>

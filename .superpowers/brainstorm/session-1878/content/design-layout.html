@@ -1,0 +1,148 @@
+<h2>布局与导航</h2>
+<p class="subtitle">整体页面的结构和导航方式</p>
+
+<div class="section">
+  <div class="mockup">
+    <div class="mockup-header">页面结构示意</div>
+    <div class="mockup-body" style="padding: 1rem">
+      <div style="background: #1a1a2e; border-radius: 0.5rem; overflow: hidden">
+        <!-- Nav -->
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem 2rem;
+            background: #16213e;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+          "
+        >
+          <span style="color: #00ffff">[首页]</span>
+          <span style="color: #8892b0">技能</span>
+          <span style="color: #8892b0">项目</span>
+          <span style="color: #8892b0">时间线</span>
+          <span style="color: #8892b0">兴趣</span>
+        </div>
+        <!-- Hero -->
+        <div
+          style="
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.08);
+          "
+        >
+          <div
+            style="
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              margin: 0 auto 1rem;
+              background: linear-gradient(135deg, #00ffff, #0077ff);
+            "
+          ></div>
+          <div
+            style="
+              height: 1.5rem;
+              width: 200px;
+              margin: 0 auto 0.5rem;
+              background: #1a1a3e;
+              border-radius: 4px;
+            "
+          ></div>
+          <div
+            style="
+              height: 1rem;
+              width: 300px;
+              margin: 0 auto;
+              background: #1a1a3e;
+              border-radius: 4px;
+            "
+          ></div>
+        </div>
+        <!-- Skills -->
+        <div
+          style="
+            padding: 2rem;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.08);
+          "
+        >
+          <div
+            style="
+              height: 1.2rem;
+              width: 80px;
+              background: #1a1a3e;
+              border-radius: 4px;
+              margin-bottom: 1rem;
+            "
+          ></div>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap">
+            <div
+              style="
+                padding: 0.3rem 0.8rem;
+                background: #1a1a3e;
+                border-radius: 1rem;
+                font-size: 0.8rem;
+                color: #64ffda;
+              "
+            >
+              React
+            </div>
+            <div
+              style="
+                padding: 0.3rem 0.8rem;
+                background: #1a1a3e;
+                border-radius: 1rem;
+                font-size: 0.8rem;
+                color: #64ffda;
+              "
+            >
+              TypeScript
+            </div>
+            <div
+              style="
+                padding: 0.3rem 0.8rem;
+                background: #1a1a3e;
+                border-radius: 1rem;
+                font-size: 0.8rem;
+                color: #64ffda;
+              "
+            >
+              Node.js
+            </div>
+          </div>
+        </div>
+        <!-- Footer hint -->
+        <div
+          style="
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #495670;
+          "
+        >
+          滚动查看更多 ▽
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>导航设计</h3>
+  <ul style="line-height: 2; color: #ccd6f6">
+    <li><strong>固定顶部导航栏</strong> — 半透明毛玻璃效果</li>
+    <li>导航链接点击<strong>平滑滚动</strong>到对应区块</li>
+    <li>滚动时<strong>高亮当前区块</strong>对应的导航项</li>
+    <li>导航栏在向下滚动时<strong>自动隐藏</strong>，向上滚动时重新出现</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>布局特点</h3>
+  <ul style="line-height: 2; color: #ccd6f6">
+    <li>全屏宽布局，内容区域<strong>最大宽度 1100px</strong> 居中</li>
+    <li>每个版块占一屏高度或按内容自适应</li>
+    <li>版块之间用 subtle 分隔线或视差过渡</li>
+  </ul>
+</div>

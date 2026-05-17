@@ -1,0 +1,258 @@
+<h2>个人卡片设计</h2>
+<p class="subtitle">Hero 区的核心视觉 — 悬停 3D 倾斜 + 反光色散</p>
+
+<div class="section">
+  <div class="mockup">
+    <div class="mockup-header">个人卡片效果示意</div>
+    <div
+      class="mockup-body"
+      style="padding: 1.5rem; display: flex; justify-content: center"
+    >
+      <div
+        style="
+          width: 320px;
+          background: linear-gradient(
+            135deg,
+            rgba(0, 255, 255, 0.05),
+            rgba(255, 0, 255, 0.05)
+          );
+          border: 1px solid rgba(0, 255, 255, 0.2);
+          border-radius: 1rem;
+          padding: 2rem;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          transition: transform 0.3s;
+        "
+      >
+        <!-- Shine/reflection overlay -->
+        <div
+          style="
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+              45deg,
+              transparent 40%,
+              rgba(255, 255, 255, 0.08) 45%,
+              rgba(0, 255, 255, 0.15) 48%,
+              rgba(255, 0, 255, 0.1) 50%,
+              rgba(255, 255, 255, 0.08) 52%,
+              transparent 55%
+            );
+            transform: rotate(25deg);
+            pointer-events: none;
+          "
+        ></div>
+        <!-- Rainbow dispersion strip -->
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              90deg,
+              transparent,
+              rgba(255, 0, 0, 0.08),
+              rgba(255, 255, 0, 0.08),
+              rgba(0, 255, 0, 0.08),
+              rgba(0, 255, 255, 0.08),
+              rgba(0, 0, 255, 0.08),
+              rgba(255, 0, 255, 0.08),
+              transparent
+            );
+            opacity: 0;
+            transition: left 0.6s ease;
+            pointer-events: none;
+          "
+        ></div>
+        <!-- Avatar -->
+        <div
+          style="
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin: 0 auto 1.2rem;
+            padding: 3px;
+            background: linear-gradient(135deg, #00ffff, #ff00ff);
+          "
+        >
+          <div
+            style="
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              background: #0a0a1a;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #00ffff;
+              font-size: 2rem;
+            "
+          >
+            👤
+          </div>
+        </div>
+        <!-- Name -->
+        <div
+          style="
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.3rem;
+          "
+        >
+          你的名字
+        </div>
+        <!-- Tagline -->
+        <div style="color: #8892b0; font-size: 0.9rem; margin-bottom: 0.3rem">
+          全栈开发者 · 创造者
+        </div>
+        <div style="color: #495670; font-size: 0.8rem; font-family: monospace">
+          &lt;code /&gt; &amp; chill
+        </div>
+        <!-- Glow effect dots -->
+        <div
+          style="
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            display: flex;
+            gap: 4px;
+          "
+        >
+          <div
+            style="
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background: #00ffff;
+              box-shadow: 0 0 8px #00ffff;
+            "
+          ></div>
+          <div
+            style="
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background: #ff00ff;
+              box-shadow: 0 0 8px #ff00ff;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>悬停交互分解</h3>
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem">
+    <tr>
+      <td
+        style="
+          padding: 0.5rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          color: #00ffff;
+        "
+      >
+        3D 倾斜
+      </td>
+      <td
+        style="
+          padding: 0.5rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          color: #ccd6f6;
+        "
+      >
+        鼠标移入时，卡片跟随光标做 X/Y 轴旋转（-8°~8°），有立体感
+      </td>
+    </tr>
+    <tr>
+      <td
+        style="
+          padding: 0.5rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          color: #00ffff;
+        "
+      >
+        反光扫射
+      </td>
+      <td
+        style="
+          padding: 0.5rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          color: #ccd6f6;
+        "
+      >
+        一道光从左到右扫过卡片表面，类似 CD 反光效果
+      </td>
+    </tr>
+    <tr>
+      <td
+        style="
+          padding: 0.5rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          color: #00ffff;
+        "
+      >
+        色散
+      </td>
+      <td
+        style="
+          padding: 0.5rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          color: #ccd6f6;
+        "
+      >
+        光扫过时产生彩虹色散效果（红→黄→绿→青→紫）
+      </td>
+    </tr>
+    <tr>
+      <td
+        style="
+          padding: 0.5rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          color: #00ffff;
+        "
+      >
+        边框发光
+      </td>
+      <td
+        style="
+          padding: 0.5rem;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          color: #ccd6f6;
+        "
+      >
+        悬停时边框亮度增强，带渐变色
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem; color: #00ffff">过渡</td>
+      <td style="padding: 0.5rem; color: #ccd6f6">
+        所有效果 0.3s~0.6s ease-out 过渡，流畅自然
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="section">
+  <h3>实现方式</h3>
+  <p style="color: #ccd6f6">
+    使用 Framer Motion 的 <code style="color: #00ffff">useMotionValue</code> +
+    <code style="color: #00ffff">useTransform</code> 监听鼠标位置，驱动卡片的
+    <code style="color: #00ffff">rotateX</code>/<code style="color: #00ffff"
+      >rotateY</code
+    >
+    和光晕位置。色散效果使用 CSS
+    <code style="color: #00ffff">background: linear-gradient</code> +
+    <code style="color: #00ffff">clip-path</code> 实现。
+  </p>
+</div>

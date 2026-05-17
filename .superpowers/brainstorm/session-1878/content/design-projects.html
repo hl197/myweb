@@ -1,0 +1,159 @@
+<h2>项目版块</h2>
+<p class="subtitle">作品展示，卡片网格布局</p>
+
+<div class="section">
+  <div class="mockup">
+    <div class="mockup-header">项目版块示意</div>
+    <div class="mockup-body" style="padding: 1.5rem">
+      <div style="background: #0a0a1a; border-radius: 0.5rem; padding: 1.5rem">
+        <!-- Title -->
+        <div
+          style="
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ccd6f6;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+          "
+        >
+          <span style="color: #00ffff">&gt;</span> 项目
+          <span
+            style="color: #495670; font-size: 0.8rem; font-family: monospace"
+            >// Things I've built</span
+          >
+        </div>
+
+        <!-- Project Grid -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem">
+          <!-- Card 1 -->
+          <div
+            style="
+              border: 1px solid rgba(0, 255, 255, 0.15);
+              border-radius: 0.75rem;
+              padding: 1.2rem;
+              background: rgba(0, 255, 255, 0.02);
+              transition: all 0.3s;
+            "
+          >
+            <div
+              style="
+                font-size: 0.75rem;
+                color: #00ffff;
+                font-family: monospace;
+                margin-bottom: 0.5rem;
+              "
+            >
+              01.
+            </div>
+            <div
+              style="
+                font-size: 1rem;
+                font-weight: 600;
+                color: #ccd6f6;
+                margin-bottom: 0.3rem;
+              "
+            >
+              项目名称
+            </div>
+            <div
+              style="font-size: 0.8rem; color: #8892b0; margin-bottom: 0.8rem"
+            >
+              简短的项目描述，说明做了什么、用了什么技术
+            </div>
+            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap">
+              <span
+                style="
+                  font-size: 0.7rem;
+                  color: #495670;
+                  font-family: monospace;
+                "
+                >React</span
+              >
+              <span
+                style="
+                  font-size: 0.7rem;
+                  color: #495670;
+                  font-family: monospace;
+                "
+                >Node.js</span
+              >
+              <span
+                style="
+                  font-size: 0.7rem;
+                  color: #495670;
+                  font-family: monospace;
+                "
+                >MongoDB</span
+              >
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            style="
+              border: 1px solid rgba(255, 0, 255, 0.15);
+              border-radius: 0.75rem;
+              padding: 1.2rem;
+              background: rgba(255, 0, 255, 0.02);
+            "
+          >
+            <div
+              style="
+                font-size: 0.75rem;
+                color: #ff00ff;
+                font-family: monospace;
+                margin-bottom: 0.5rem;
+              "
+            >
+              02.
+            </div>
+            <div
+              style="
+                font-size: 1rem;
+                font-weight: 600;
+                color: #ccd6f6;
+                margin-bottom: 0.3rem;
+              "
+            >
+              另一个项目
+            </div>
+            <div
+              style="font-size: 0.8rem; color: #8892b0; margin-bottom: 0.8rem"
+            >
+              简短的项目描述
+            </div>
+            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap">
+              <span
+                style="
+                  font-size: 0.7rem;
+                  color: #495670;
+                  font-family: monospace;
+                "
+                >Python</span
+              >
+              <span
+                style="
+                  font-size: 0.7rem;
+                  color: #495670;
+                  font-family: monospace;
+                "
+                >FastAPI</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>项目卡片交互</h3>
+  <ul style="line-height: 2; color: #ccd6f6">
+    <li>悬停时卡片边框发光增强，轻微上浮</li>
+    <li>每个卡片带编号和对应的彩色标识</li>
+    <li>点击可跳转到项目链接（GitHub / 线上地址）</li>
+    <li>滚动进入视口时卡片逐个滑入</li>
+  </ul>
+</div>

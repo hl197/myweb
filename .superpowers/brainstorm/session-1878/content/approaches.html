@@ -1,0 +1,63 @@
+<h2>推荐两种方案</h2>
+<p class="subtitle">基于你的需求，以下是两种实现路径</p>
+
+<div class="section">
+  <h3>方案 A：Next.js + Tailwind + 动效库（推荐）</h3>
+  <div class="mockup" style="margin: 1rem 0">
+    <div class="mockup-header">技术栈</div>
+    <div
+      class="mockup-body"
+      style="font-family: monospace; font-size: 0.9rem; line-height: 2"
+    >
+      Next.js (App Router) + Tailwind CSS + Framer Motion + TypeScript
+    </div>
+  </div>
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>优势</h4>
+      <ul>
+        <li>Tailwind 暗色主题开箱即用，开发极快</li>
+        <li>Framer Motion 滚动动画一行代码搞定</li>
+        <li>组件化开发，后续扩展方便</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>劣势</h4>
+      <ul>
+        <li>需要了解 Tailwind 语法</li>
+        <li>依赖稍多</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>方案 B：Next.js + CSS Modules + 原生动画</h3>
+  <div class="mockup" style="margin: 1rem 0">
+    <div class="mockup-header">技术栈</div>
+    <div
+      class="mockup-body"
+      style="font-family: monospace; font-size: 0.9rem; line-height: 2"
+    >
+      Next.js (App Router) + CSS Modules + Intersection Observer + TypeScript
+    </div>
+  </div>
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>优势</h4>
+      <ul>
+        <li>零额外依赖，完全掌控样式</li>
+        <li>更轻量的最终产物</li>
+        <li>纯 CSS 实现暗色主题</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>劣势</h4>
+      <ul>
+        <li>需要手写更多 CSS</li>
+        <li>动画需要自己实现</li>
+        <li>开发速度稍慢</li>
+      </ul>
+    </div>
+  </div>
+</div>

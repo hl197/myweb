@@ -1,0 +1,198 @@
+<h2>布局与导航 v2</h2>
+<p class="subtitle">导航左对齐 + 粒子光子视觉风格</p>
+
+<div class="section">
+  <div class="mockup">
+    <div class="mockup-header">页面结构示意</div>
+    <div class="mockup-body" style="padding: 1rem">
+      <div
+        style="
+          background: #0a0a1a;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          position: relative;
+        "
+      >
+        <!-- Particle background dots -->
+        <div style="position: absolute; inset: 0; opacity: 0.3">
+          <div
+            style="
+              position: absolute;
+              top: 10%;
+              left: 20%;
+              width: 3px;
+              height: 3px;
+              background: #00ffff;
+              border-radius: 50%;
+              box-shadow: 0 0 6px #00ffff;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              top: 30%;
+              left: 70%;
+              width: 2px;
+              height: 2px;
+              background: #ff00ff;
+              border-radius: 50%;
+              box-shadow: 0 0 4px #ff00ff;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              top: 60%;
+              left: 40%;
+              width: 2px;
+              height: 2px;
+              background: #00ffff;
+              border-radius: 50%;
+              box-shadow: 0 0 4px #00ffff;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              top: 80%;
+              left: 85%;
+              width: 3px;
+              height: 3px;
+              background: #ff00ff;
+              border-radius: 50%;
+              box-shadow: 0 0 6px #ff00ff;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              top: 45%;
+              left: 10%;
+              width: 2px;
+              height: 2px;
+              background: #00ffff;
+              border-radius: 50%;
+              box-shadow: 0 0 4px #00ffff;
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              top: 20%;
+              left: 55%;
+              width: 1px;
+              height: 40px;
+              background: linear-gradient(transparent, #00ffff, transparent);
+              transform: rotate(30deg);
+            "
+          ></div>
+          <div
+            style="
+              position: absolute;
+              top: 70%;
+              left: 75%;
+              width: 1px;
+              height: 30px;
+              background: linear-gradient(transparent, #ff00ff, transparent);
+              transform: rotate(-20deg);
+            "
+          ></div>
+        </div>
+        <!-- Nav - LEFT ALIGNED -->
+        <div
+          style="
+            display: flex;
+            justify-content: flex-start;
+            gap: 2rem;
+            padding: 1rem 2rem;
+            background: rgba(10, 10, 30, 0.8);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+          "
+        >
+          <span style="color: #00ffff; font-weight: 600; letter-spacing: 1px"
+            >[姓名]</span
+          >
+          <span style="color: #8892b0; cursor: pointer">首页</span>
+          <span style="color: #8892b0; cursor: pointer">技能</span>
+          <span style="color: #8892b0; cursor: pointer">项目</span>
+          <span style="color: #8892b0; cursor: pointer">时间线</span>
+          <span style="color: #8892b0; cursor: pointer">兴趣</span>
+        </div>
+        <!-- Hero -->
+        <div
+          style="
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+          "
+        >
+          <div
+            style="
+              width: 90px;
+              height: 90px;
+              border-radius: 50%;
+              margin: 0 auto 1.5rem;
+              background: linear-gradient(135deg, #00ffff, #0077ff, #ff00ff);
+              background-size: 200%;
+              padding: 3px;
+            "
+          >
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: #0a0a1a;
+              "
+            ></div>
+          </div>
+          <div
+            style="
+              height: 2rem;
+              width: 240px;
+              margin: 0 auto 0.5rem;
+              background: linear-gradient(90deg, #00ffff, #ff00ff);
+              -webkit-background-clip: text;
+              color: transparent;
+              font-weight: 700;
+            "
+          >
+            Your Name
+          </div>
+          <div
+            style="height: 1rem; width: 350px; margin: 0 auto; color: #8892b0"
+          >
+            全栈开发者 · 热爱创造 · 终身学习
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>导航设计（已调整）</h3>
+  <ul style="line-height: 2; color: #ccd6f6">
+    <li><strong>导航左对齐</strong>，左侧显示姓名/Logo</li>
+    <li>固定顶部，毛玻璃背景（backdrop-filter: blur）</li>
+    <li>点击平滑滚动到对应区块</li>
+    <li>当前区块高亮，滚动时自动更新</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h3>粒子光子风格要点</h3>
+  <ul style="line-height: 2; color: #ccd6f6">
+    <li>
+      深空黑底色（#0a0a1a）上点缀<strong>发光粒子（cyan + magenta）</strong>
+    </li>
+    <li>光线条穿过画面，营造<strong>光子流动感</strong></li>
+    <li>关键文字使用<strong>渐变发光文字</strong>（青→紫）</li>
+    <li>头像/卡片使用<strong>发光边框</strong>，悬停时亮度增强</li>
+    <li>整体感觉：科技感 + 太空 + 光效，类似星际穿越的视觉语言</li>
+  </ul>
+</div>
