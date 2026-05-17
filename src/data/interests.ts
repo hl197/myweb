@@ -4,8 +4,8 @@ export interface Interest {
 }
 
 export const interests: Interest[] = [
-  { emoji: "🎸", label: "吉他" },
-  { emoji: "📷", label: "摄影" },
-  { emoji: "🎮", label: "游戏" },
-  { emoji: "🏃", label: "跑步" },
+  { emoji: "📚", label: "阅读传统文化书籍" },
+  { emoji: "🤖", label: "探索AI" },
+  { emoji: "🎧", label: "听音乐" },
+  { emoji: "🚶", label: "散步" },
 ];

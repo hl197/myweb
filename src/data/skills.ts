@@ -1,6 +1,6 @@
 export interface Skill {
   name: string;
-  color: "orange" | "purple" | "green";
+  color: "orange" | "purple" | "green" | "blue" | "rose";
 }
 
 export interface SkillCategory {
@@ -19,6 +19,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Next.js", color: "orange" },
       { name: "Tailwind CSS", color: "orange" },
       { name: "Vue", color: "orange" },
+      { name: "HTML/CSS", color: "orange" },
     ],
   },
   {
@@ -27,7 +28,9 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Node.js", color: "purple" },
       { name: "Python", color: "purple" },
+      { name: "Java", color: "purple" },
       { name: "PostgreSQL", color: "purple" },
+      { name: "Redis", color: "purple" },
     ],
   },
   {
@@ -36,6 +39,8 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Git", color: "green" },
       { name: "Docker", color: "green" },
+      { name: "Linux", color: "green" },
+      { name: "CI/CD", color: "green" },
     ],
   },
 ];

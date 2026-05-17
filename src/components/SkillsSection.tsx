@@ -3,10 +3,12 @@
 import { motion } from "framer-motion";
 import { skillCategories } from "@/data/skills";
 
-const colorMap = {
+const colorMap: Record<string, string> = {
   orange: "border-orange-300/50 bg-orange-50/50 text-orange-500",
   purple: "border-purple-300/50 bg-purple-50/50 text-purple-500",
   green: "border-green-300/50 bg-green-50/50 text-green-500",
+  blue: "border-blue-300/50 bg-blue-50/50 text-blue-500",
+  rose: "border-rose-300/50 bg-rose-50/50 text-rose-500",
 };
 
 export default function SkillsSection() {

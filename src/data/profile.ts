@@ -6,8 +6,8 @@ export interface Profile {
 }
 
 export const profile: Profile = {
-  name: "你的名字",
-  avatar: "👤",
+  name: "亮",
+  avatar: "/avatars/avatar.jpg",
   tagline: "全栈开发者 · 创造者 · 终身学习者",
-  subtitle: "<code /> & chill",
+  subtitle: "探索代码与生活的无限可能",
 };

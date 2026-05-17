@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { profile } from "@/data/profile";
 
 const NAV_ITEMS = [
@@ -14,7 +14,7 @@ const NAV_ITEMS = [
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("hero");
   const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const main = document.querySelector("main");
@@ -22,8 +22,8 @@ export default function Navbar() {
 
     const handleScroll = () => {
       const currentY = main.scrollTop;
-      setVisible(currentY < lastScrollY || currentY < 80);
-      setLastScrollY(currentY);
+      setVisible(currentY < lastScrollY.current || currentY < 80);
+      lastScrollY.current = currentY;
 
       const sections = NAV_ITEMS.map((item) =>
         document.getElementById(item.id),
@@ -41,7 +41,7 @@ export default function Navbar() {
 
     main.addEventListener("scroll", handleScroll, { passive: true });
     return () => main.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
