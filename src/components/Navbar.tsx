@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { profile } from "@/data/profile";
 
 const NAV_ITEMS = [
@@ -13,18 +13,12 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("hero");
-  const [visible, setVisible] = useState(true);
-  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const main = document.querySelector("main");
     if (!main) return;
 
     const handleScroll = () => {
-      const currentY = main.scrollTop;
-      setVisible(currentY < lastScrollY.current || currentY < 80);
-      lastScrollY.current = currentY;
-
       const sections = NAV_ITEMS.map((item) =>
         document.getElementById(item.id),
       ).filter(Boolean);
@@ -51,11 +45,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 backdrop-blur-md bg-white/70 border-b border-orange-200/30 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/70 border-b border-orange-200/30">
       <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
         <button
           onClick={() => scrollTo("hero")}

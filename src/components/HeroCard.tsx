@@ -22,9 +22,6 @@ export default function HeroCard() {
   const cardRef = useRef<HTMLDivElement>(null);
   const [sparkles, setSparkles] = useState<Sparkle[]>([]);
   const sparkleId = useRef(0);
-  const [idleAngle, setIdleAngle] = useState(0);
-  const idleTimer = useRef<ReturnType<typeof setInterval> | null>(null);
-  const [isHovering, setIsHovering] = useState(false);
   const glowPulse = useAnimation();
 
   const mouseX = useMotionValue(0);
@@ -71,23 +68,6 @@ export default function HeroCard() {
   const contentRotateX = useTransform(mouseY, [-0.5, 0.5], [3, -3]);
   const contentRotateY = useTransform(mouseX, [-0.5, 0.5], [-3, 3]);
 
-  // Idle auto-rotation
-  useEffect(() => {
-    if (isHovering) {
-      if (idleTimer.current) {
-        clearInterval(idleTimer.current);
-        idleTimer.current = null;
-      }
-    } else {
-      idleTimer.current = setInterval(() => {
-        setIdleAngle((prev) => (prev + 0.15) % 360);
-      }, 50);
-    }
-    return () => {
-      if (idleTimer.current) clearInterval(idleTimer.current);
-    };
-  }, [isHovering]);
-
   // Pulsing glow animation
   useEffect(() => {
     glowPulse.start({
@@ -127,15 +107,9 @@ export default function HeroCard() {
     [mouseX, mouseY],
   );
 
-  const handleMouseEnter = useCallback(() => {
-    setIsHovering(true);
-    setIdleAngle(0);
-  }, []);
-
   const handleMouseLeave = useCallback(() => {
     mouseX.set(0);
     mouseY.set(0);
-    setIsHovering(false);
   }, [mouseX, mouseY]);
 
   const isImageAvatar =
@@ -153,7 +127,6 @@ export default function HeroCard() {
       <motion.div
         ref={cardRef}
         onMouseMove={handleMouseMove}
-        onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{
           rotateX,
@@ -162,28 +135,6 @@ export default function HeroCard() {
         }}
         className="relative w-full max-w-sm perspective-[1000px]"
       >
-        {/* Flowing gradient border (behind card) */}
-        <motion.div
-          className="absolute -inset-[2px] rounded-2xl z-[-1]"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
-          style={{
-            background: `conic-gradient(
-              from ${idleAngle}deg at 50% 50%,
-              #f97316,
-              #d946ef,
-              #06b6d4,
-              #10b981,
-              #f97316,
-              #d946ef,
-              #06b6d4,
-              #10b981,
-              #f97316
-            )`,
-            filter: "blur(3px)",
-          }}
-        />
-
         <motion.div
           style={{ boxShadow: cardShadow }}
           className="relative overflow-hidden rounded-2xl p-8 text-center bg-white/60 backdrop-blur-xl border border-gray-200/40"
